@@ -14,10 +14,6 @@ st.write('---')
 file_path = 'housing.csv'
 housing_data = pd.read_csv(file_path)
 
-# Display dataset columns for debugging
-st.write("Dataset Columns:", housing_data.columns)
-st.write("Number of Columns:", len(housing_data.columns))
-
 # Encode 'ocean_proximity' since it's categorical
 label_encoder = LabelEncoder()
 housing_data['ocean_proximity'] = label_encoder.fit_transform(housing_data['ocean_proximity'])
